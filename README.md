@@ -4,20 +4,20 @@ Client that randomly calls the exposed methods on the [Udacity eCommerce REST AP
 ## Operation
 This client runs a thread for a given user attmepting 20 different calls to the API.  
 
-#### To Build:
+### Build
 
 ```
 .mvn clean package
 ```
 
-#### To Run .
+### Run
 
 After starting the eCommerce REST API server, run this application with the following command:
 ```
 java -jar ./target/exercise-api-0.0.1-SNAPSHOT-spring-boot.jar 
 ```
 
-##### Usage
+#### Usage
 ```
 java -jar ./target/exercise-api-0.0.1-SNAPSHOT-spring-boot.jar <api-hostname>:<port> <username-to-create> [, <username-to-create> [, ...]]
 ```
@@ -28,7 +28,7 @@ If the server is running on a different server or port, you can specify any url 
 
 If you want to create multiple users, a new thread will be spawned for each username supplied on the command line after the url.
 
-##### Example
+#### Example
 This command will launch four threads for each of four users and execute 20 API calls in each thread.  (The console output is piped to null and the process runs in the background.)
 ```
 java -jar ./target/exercise-api-0.0.1-SNAPSHOT-spring-boot.jar http://localhost:8081 User1 User2 User3 User4 2>&1 1>/dev/null &
